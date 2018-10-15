@@ -7,11 +7,26 @@ using Xamarin.Forms;
 
 namespace ZodiacSigns
 {
-    public partial class MainPage : ContentPage
+    public partial class TabbedPageSample : TabbedPage
     {
-        public MainPage()
+        public TabbedPageSample()
         {
             InitializeComponent();
+        }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+            ToolbarItem current = (ToolbarItem)sender;
+            if( current.Text == "Add")
+            {
+                current.Text = "Another";
+                Navigation.PushAsync(new NewItemPage());
+            }
+            else if( current.Text == "Delete")
+            {
+
+            }
         }
     }
 }

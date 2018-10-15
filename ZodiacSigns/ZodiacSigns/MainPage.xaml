@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ZodiacSigns"
-             x:Class="ZodiacSigns.MainPage">
+             xmlns:ZodiacSigns="clr-namespace:TabbedPageSample"
+             x:Class="TabbedPageSample.ZodiacSigns">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Delete" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Edit" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="View" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Help" Clicked="ToolbarItem_Clicked" />
+    </TabbedPage.ToolbarItems>
+    
+    <ZodiacSigns:Libra Title="Libra" />
+    <ZodiacSigns:Sagitarius Title="Sagitarius" />
+    <ZodiacSigns:Scorpio Title="Scorpio" />
 
-</ContentPage>
+</TabbedPage>
